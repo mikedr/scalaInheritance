@@ -5,8 +5,7 @@ object Inheritance extends App {
     def eat = println("Animal eating")
   }
 
-  class Dog extends Animal {
-    override val creatureType: String = "Domestic"
+  class Dog(override val creatureType: String) extends Animal {
     def eatDog= {
       eat
       println("Croquetas")
@@ -17,7 +16,7 @@ object Inheritance extends App {
   class Person( name: String, age: Int)
   class Employee(name: String, age: Int, idEmp: Int) extends Person(name, age)
 
-  def dog = new Dog
+  def dog = new Dog("Casero")
   dog.eat
   println(dog.creatureType)
 }
