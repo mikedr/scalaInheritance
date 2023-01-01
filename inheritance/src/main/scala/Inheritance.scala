@@ -19,4 +19,8 @@ object Inheritance extends App {
   def dog = new Dog("Casero")
   dog.eat
   println(dog.creatureType)
+
+  val unknown: Animal = new Dog("Mixed")
+  println(unknown.creatureType)
+  unknown.eat
 }
