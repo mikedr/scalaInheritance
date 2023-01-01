@@ -11,6 +11,9 @@ object Inheritance extends App {
     }
   }
 
+  class Person( name: String, age: Int)
+  class Employee(name: String, age: Int, idEmp: Int) extends Person(name, age)
+
   def dog = new Dog
   dog.eatDog
 }
